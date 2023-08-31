@@ -1,0 +1,114 @@
+{% extends 'Shop/main-page.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Title</title>
+    {% block content %}
+    <style>
+        body > nav {
+            background-color: #28a745;
+        }
+        .footer {
+            background-color: #28a745;
+            color: #f8f9fa;
+            padding: 10px;
+        }
+        .custom-card {
+            border: 1px solid #dcdcdc;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            margin: 15px;
+            width: 280px; /* Set the desired card width */
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .custom-card .card-img-top {
+            height: 150px; /* Set the desired image height */
+            object-fit: cover;
+            flex: 0 0 150px;
+        }
+
+        .custom-card .card-body {
+            padding: 15px;
+        }
+
+        .custom-card .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .custom-card .card-text {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .custom-card .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+        }
+
+        .custom-card .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Products</h4>
+                        <div class="d-flex flex-wrap">
+                            {% for product in products %}
+                            <div class="card custom-card">
+                                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ product.name }}</h5>
+                                    <p class="card-text">Price: ${{ product.price }}</p>
+                                    <p class="card-text">Quantity: {{ product.quantity }} kg</p>
+                                    <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+    <div class="cart-container">
+        <h4>Shopping Cart</h4>
+        <ul class="cart-items">
+            {% for item_id, item in cart_items.items %}
+                <li class="cart-item">
+                    <span>{{ product.name }}</span>
+                    <span>${{ item.price|floatformat:2 }}/item</span>
+                    <span>Quantity: {{ item.quantity }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="total">
+            Total: ${{ total_price|floatformat:2 }}
+        </div>
+        <a href="{% url 'checkout' %}" class="btn btn-primary btn-block mt-3">Checkout</a>
+    </div>
+</div>
+    </div>
+</div>
+{% endblock content %}
+</body>
+</html>

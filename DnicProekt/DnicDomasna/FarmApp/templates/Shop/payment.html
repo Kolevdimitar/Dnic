@@ -1,0 +1,83 @@
+{% extends 'Shop/main-page.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+{% block content %}
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .payment-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .payment-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+      background-color: #28a745;
+      color: #f8f9fa;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="payment-container">
+
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card payment-form">
+          <div class="card-header">
+            <h4 class="mb-0">Secure Payment</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+              </div>
+              <div class="form-group">
+                <label for="expiration">Expiration Date</label>
+                <input type="text" class="form-control" id="expiration" placeholder="MM/YY">
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="password" class="form-control" id="cvv" placeholder="CVV">
+              </div>
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Pay Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {% endblock content %}
+
+<!-- Include Bootstrap JS (optional, for certain features) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

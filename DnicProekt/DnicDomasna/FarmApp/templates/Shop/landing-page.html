@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    body > nav{
+        background-color :#28a745;
+    }
+    .jumbotron {
+        background-image: url("{% static 'images/farm-hill-with-green-field-background-agriculture-cultivate-countryside-field-rural_281368-6.avif' %}");
+        background-size: cover;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .btn {
+        margin: 10px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    .footer {
+        background-color: #28a745;
+        color: #f8f9fa;
+        padding: 10px;
+    }
+</style>
+<title>Farm Market App</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg shadow">
+    <a class="navbar-brand px-2 text-white" href="#">Farm Market</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto px-2">
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="content">
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Welcome to Farm Market</h1>
+            <p>Buy and sell fresh farm products!</p>
+            <div>
+                <a href="signup-seller.html" class="btn btn-primary btn-lg">Sign Up as Seller</a>
+                <a href="signup-buyer.html" class="btn btn-success btn-lg">Sign Up as Buyer</a>
+                <a href="#" class="btn btn-secondary btn-lg">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer shadow">
+    <div class="container text-center">
+        <span>&copy; 2023 Farm Market App. All rights reserved.</span>
+    </div>
+</footer>
+
+
+</body>
+</html>

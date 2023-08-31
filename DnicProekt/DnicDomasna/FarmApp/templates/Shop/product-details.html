@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body>nav {
+            background-color: #28a745;
+        }
+        footer {
+            background-color: #28a745;
+            color: #f8f9fa;
+            padding: 10px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
+    </style>
+    <title>Farm Market App - Product Details</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="#">Farm Market</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4 content">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/400" class="img-fluid" alt="Product Image">
+        </div>
+        <div class="col-md-6">
+            <h2>Delicious Apples</h2>
+            <p>These apples are picked fresh from our farm and are known for their sweetness and crunchiness.</p>
+            <p><strong>Price:</strong> $1.99 per pound</p>
+            <p><strong>Availability:</strong> In Stock</p>
+
+            <hr>
+
+            <h4>Product Details</h4>
+            <ul>
+                <li>Sweet and crisp flavor</li>
+                <li>Rich in vitamins and fiber</li>
+                <li>Locally grown and organic</li>
+                <li>Perfect for snacking or baking</li>
+            </ul>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" class="form-control" min="1" value="1">
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-success btn-block">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-success text-white text-center p-3 mt-4">
+    &copy; 2023 Farm Market App. All rights reserved.
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

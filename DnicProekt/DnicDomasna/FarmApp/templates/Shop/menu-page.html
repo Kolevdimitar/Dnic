@@ -1,0 +1,107 @@
+{% extends 'Shop/main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <title>Farm Market App - Home</title>
+</head>
+<body>
+
+{% block content %}
+<div class="container mt-4 content">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="jumbotron jumbotron-fluid" style="background-image: url('{% static 'images/background.avif' %}'); background-size: cover; background-position: center;">
+                <div class="container text-center">
+                    <h1 class="display-4">Welcome to Farm Market</h1>
+                    <p class="lead">Fresh and locally grown produce for a healthy lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="mb-4">Featured Products</h2>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'images/Apple_rec.jpg' %}" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Delicious Apples</h5>
+                    <p class="card-text">Sweet and crisp apples from our farm.</p>
+                    <p class="card-text">$1.99 per pound</p>
+                    <a href="#" class="btn btn-primary btn-block">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+        <img src="{% static 'images/tomatoes.jpg' %}" class="card-img-top custom-image" alt="Tomatoes">
+                <div class="card-body">
+            <h5 class="card-title">Fresh Tomatoes</h5>
+            <p class="card-text">Locally grown tomatoes, ripe and ready for your recipes.</p>
+            <p class="card-text">$1.99 per pound</p>
+            <a href="#" class="btn btn-primary btn-block">View Details</a>
+            </div>
+    </div>
+        </div>
+        <div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="{% static 'images/eggs.avif' %}" class="card-img-top custom-image" alt="Eggs">
+        <div class="card-body">
+            <h5 class="card-title">Farm Fresh Eggs</h5>
+            <p class="card-text">Locally sourced farm fresh eggs, perfect for your breakfast.</p>
+            <p class="card-text">$2.49 per dozen</p>
+            <a href="#" class="btn btn-primary btn-block">View Details</a>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="mb-4">Latest News</h2>
+            <div class="media mb-4">
+                <img src="https://via.placeholder.com/150" class="mr-3 rounded" alt="News Image">
+                <div class="media-body">
+                    <h5 class="mt-0">Farm Market Wins Sustainability Award</h5>
+                    <p>Our commitment to eco-friendly farming practices has been recognized with a prestigious award.</p>
+                </div>
+            </div>
+            <div class="media">
+                <img src="https://via.placeholder.com/150" class="mr-3 rounded" alt="News Image">
+                <div class="media-body">
+                    <h5 class="mt-0">New Seasonal Produce Now Available</h5>
+                    <p>Discover the latest additions to our collection of fresh, seasonal produce.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-4">Subscribe to Our Newsletter</h2>
+            <div class="card p-4">
+                <p class="mb-4">Stay updated with our latest offers and news by subscribing to our newsletter.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
